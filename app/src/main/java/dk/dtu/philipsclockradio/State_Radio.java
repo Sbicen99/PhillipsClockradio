@@ -35,22 +35,14 @@ public class State_Radio extends StateAdapter {
     }
 
 
+    public void setValgtForAtGemme (boolean valgtForAtGemme) {
 
-    public void onClick_Hour (ContextClockradio ccontext) {
+        this.valgtForAtGemme = valgtForAtGemme;
 
-        if (valgtForAtGemme){
-
-            AMFrekvens -= 1;
-            ccontext.ui.setDisplayText(AMFrekvens + "");
-
-        } else {
-
-            FMFrekvens -= 1;
-            ccontext.ui.setDisplayText(FMFrekvens + "");
-
-        }
     }
 
+
+    @Override
     public void onClick_Min (ContextClockradio ccontext) {
 
         if (valgtForAtGemme){
@@ -66,6 +58,21 @@ public class State_Radio extends StateAdapter {
         }
     }
 
+    @Override
+    public void onClick_Hour (ContextClockradio ccontext) {
+
+        if (valgtForAtGemme){
+
+            AMFrekvens -= 1;
+            ccontext.ui.setDisplayText(AMFrekvens + "");
+
+        } else {
+
+            FMFrekvens -= 1;
+            ccontext.ui.setDisplayText(FMFrekvens + "");
+
+        }
+    }
 
     @Override
     public void onLongClick_Power(ContextClockradio ccontext) {
@@ -95,13 +102,11 @@ public class State_Radio extends StateAdapter {
         }
     }
 
+    @Override
     public void onExitState (ContextClockradio ccontext) {
 
+        ccontext.ui.statusTextview.setText("");
+        ccontext.ui.turnOffLED(1);
 
     }
-
-
-
-
-
 }
