@@ -15,7 +15,7 @@ public class ContextClockradio {
     private double fmFrekvens = 94.2; //Valgt en tilfældig fm-frekvens
     public double [] amFrekvenser = new double[10];
     public double [] fmFrekvenser = new double[10];
-    private boolean valgtFrekvens = false;
+    private boolean valgtForAtGemme = false;
     public static MainUI ui;
 
 
@@ -85,16 +85,16 @@ public class ContextClockradio {
 
     }
 
-    public boolean isValgtFrekvens() {
+    public boolean isValgtForAtGemme() {
 
-        return valgtFrekvens;
+        return valgtForAtGemme;
 
     }
 
 
-    public void setValgtFrekvens (boolean valgtFrekvens){
+    public void setValgtForAtGemme(boolean valgtForAtGemme){
 
-        this.valgtFrekvens = valgtFrekvens;
+        this.valgtForAtGemme = valgtForAtGemme;
 
     }
 
