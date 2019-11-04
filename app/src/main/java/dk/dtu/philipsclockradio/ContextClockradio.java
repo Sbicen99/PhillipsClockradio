@@ -5,12 +5,20 @@ import java.util.Date;
 
 //
 public class ContextClockradio {
+
+
     private State currentState;
     private Date mTime;
     private String mDisplayText;
     public boolean isClockRunning = false;
-
+    private double amFrekvens = 104;  //Valgt en tilfældig am-frekvens
+    private double fmFrekvens = 94.2; //Valgt en tilfældig fm-frekvens
+    public double [] amFrekvenser = new double[10];
+    public double [] fmFrekvenser = new double[10];
+    private boolean valgtFrekvens = false;
     public static MainUI ui;
+
+
 
     public ContextClockradio(MainUI context){
         ui = context;
@@ -52,6 +60,46 @@ public class ContextClockradio {
     public Date getTime(){
         return mTime;
     }
+
+    public double getAmFrekvens(){
+
+        return amFrekvens;
+
+    }
+
+    public void setAmFrekvens (double amFrekvens){
+
+        this.amFrekvens = amFrekvens;
+
+    }
+
+    public double getFmFrekvens (){
+
+        return amFrekvens;
+
+    }
+
+    public void setFmFrekvens (double fmFrekvens){
+
+        this.fmFrekvens = fmFrekvens;
+
+    }
+
+    public boolean isValgtFrekvens() {
+
+        return valgtFrekvens;
+
+    }
+
+
+    public void setValgtFrekvens (boolean valgtFrekvens){
+
+        this.valgtFrekvens = valgtFrekvens;
+
+    }
+
+
+
 
     //Disse metoder bliver kaldt fra UI tråden
     public void onClick_Hour() {

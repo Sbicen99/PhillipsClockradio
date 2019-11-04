@@ -4,6 +4,7 @@ import java.util.Date;
 
 
 public class StateSetTime extends StateAdapter {
+
     Date mTime;
 
     StateSetTime(){}
@@ -36,6 +37,8 @@ public class StateSetTime extends StateAdapter {
         context.updateDisplayTime();
     }
 
+
+    // Gøre brug af den i State_Alarm-klassen
     @Override
     public void onClick_Preset(ContextClockradio context) {
         context.setState(new StateStandby(context.getTime()));

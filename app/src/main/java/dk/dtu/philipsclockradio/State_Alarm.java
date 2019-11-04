@@ -2,11 +2,11 @@ package dk.dtu.philipsclockradio;
 
 import java.util.Date;
 
-public class StateSetAlarm extends StateAdapter {
+public class State_Alarm extends StateAdapter {
 
 
-    Date clockTid;
-    String clockSkærmTekst;
+    Date mTime;
+    String mDisplayText;
 
     /*
      Gøre brug af metoderne fra StateAdapter, og også derfor vi gør brug af nedarvning = state patterns
@@ -16,7 +16,7 @@ public class StateSetAlarm extends StateAdapter {
 
         ccontext.ui.turnOffLED(2);
 
-        clockTid = new Date();
+        mTime = new Date();
 
         ccontext.ui.turnOffTextBlink();
 
@@ -30,7 +30,7 @@ public class StateSetAlarm extends StateAdapter {
 
     public void onClick_Hour(ContextClockradio ccontext){
 
-        clockTid.setTime(clockTid.getTime() + 3600000); // 3600 sekunder = 1 minut
+        mTime.setTime(mTime.getTime() + 3600000); // 3600 sekunder = 1 minut
 
         updateDisplayTime(ccontext);
 
@@ -38,7 +38,7 @@ public class StateSetAlarm extends StateAdapter {
 
     public void onClick_Min(ContextClockradio ccontext){
 
-        clockTid.setTime(clockTid.getTime() + 60000); //6 sekunder.
+        mTime.setTime(mTime.getTime() + 60000); //6 sekunder.
         updateDisplayTime(ccontext);
 
 
@@ -66,9 +66,9 @@ public class StateSetAlarm extends StateAdapter {
 
     private void updateDisplayTime(ContextClockradio ccontext) {
 
-        clockSkærmTekst = clockTid.toString().substring(11, 16);
+        mDisplayText = mTime.toString().substring(11, 16);
 
-        ccontext.ui.setDisplayText(clockSkærmTekst);
+        ccontext.ui.setDisplayText(mDisplayText);
 
 
     }

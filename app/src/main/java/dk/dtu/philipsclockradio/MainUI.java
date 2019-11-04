@@ -19,9 +19,7 @@ public class MainUI extends AppCompatActivity implements OnTouchListener {
     private Button btn_hour, btn_min, btn_preset, btn_sleep, btn_al1, btn_al2, btn_snooze;
     private ImageButton btn_power;
     private ImageView circle1, circle2, circle3, circle4, circle5;
-
     private static ContextClockradio logik;
-
     private boolean displayLed1, displayLed2, displayLed3, displayLed4, displayLed5, displayBlink, musicPlaying;
     private boolean longclick = false;
     private View currentbtn;
