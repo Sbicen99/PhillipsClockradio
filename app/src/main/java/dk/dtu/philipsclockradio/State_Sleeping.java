@@ -7,7 +7,7 @@ public class State_Sleeping extends StateAdapter {
     private boolean mTimerR;
     private CountDownTimer mCDTimer;
     private long mTidTilbageIMilliSekunder = StartTid;
-    private static final long StartTid = 5000;
+    private static final long StartTid = 5000; // 5 sekunder
     int [] interval = new int[] {120, 90, 60, 30, 15};
     int klik = 1;
 
@@ -24,8 +24,8 @@ public class State_Sleeping extends StateAdapter {
         // 1 sekund
         mCDTimer = new CountDownTimer(mTidTilbageIMilliSekunder, 1000) {
             @Override
-            public void onTick(long UntilFinished) {
-                mTidTilbageIMilliSekunder = UntilFinished;
+            public void onTick(long finished) {
+                mTidTilbageIMilliSekunder = finished;
 
             }
 

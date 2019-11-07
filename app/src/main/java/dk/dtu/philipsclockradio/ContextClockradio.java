@@ -11,6 +11,7 @@ public class ContextClockradio {
     private Date mTime;
     private String mDisplayText;
     public boolean isClockRunning = false;
+    public boolean snooze;
     private double amFrekvens = 104;  //Valgt en tilfældig am-frekvens
     private double fmFrekvens = 94.2; //Valgt en tilfældig fm-frekvens
     public double [] amFrekvenser = new double[10];
@@ -57,6 +58,18 @@ public class ContextClockradio {
         ui.setDisplayText(mDisplayText);
     }
 
+    public boolean isSnooze () {
+
+        return snooze;
+
+    }
+
+    public void setSnooze (boolean snooze) {
+
+        this.snooze = snooze;
+
+    }
+
     public Date getTime(){
         return mTime;
     }
@@ -97,6 +110,7 @@ public class ContextClockradio {
         this.valgtForAtGemme = valgtForAtGemme;
 
     }
+
 
 
 

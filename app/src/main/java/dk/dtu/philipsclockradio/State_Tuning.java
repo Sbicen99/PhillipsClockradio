@@ -1,6 +1,6 @@
 package dk.dtu.philipsclockradio;
 
-public class State_ChoosingAMFMValues extends StateAdapter {
+public class State_Tuning extends StateAdapter {
 
 
     private int gemtVærdi = 1;
@@ -8,7 +8,7 @@ public class State_ChoosingAMFMValues extends StateAdapter {
 
 
 
-    State_ChoosingAMFMValues(boolean valgtFrekvens) {
+    State_Tuning(boolean valgtFrekvens) {
 
         this.valgtForAtGemme = valgtFrekvens;
 

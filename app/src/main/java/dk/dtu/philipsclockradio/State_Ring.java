@@ -11,7 +11,7 @@ public class State_Ring extends StateAdapter {
     @Override
     public void onClick_Snooze(ContextClockradio ccontext) {
 
-        ccontext.ui.statusTextview.setText("Alarmen er udskudt");
+        ccontext.ui.statusTextview.setText("Alarm er udskudt");
 
     }
 
@@ -27,3 +27,4 @@ public class State_Ring extends StateAdapter {
 
     }
 }
+
