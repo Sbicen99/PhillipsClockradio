@@ -17,7 +17,7 @@ public class State_Alarm extends StateAdapter {
 
 
     /*
-     Gøre brug af metoderne fra StateAdapter, og også derfor vi gør brug af nedarvning
+     Gøre brug af metoderne fra StateAdapter, og også derfor vi gør brug af nedarvning (statepattern)
      */
 
     @Override
